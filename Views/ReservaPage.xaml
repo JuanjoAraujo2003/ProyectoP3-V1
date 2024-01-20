@@ -22,8 +22,11 @@
         <Label Text="Seleccione una sede" />
         <Picker x:Name="pkSede" Title="Seleccione uno" >
             <Picker.Items>
-                <x:String>San Francisco</x:String>
+                <x:String>New York</x:String>
+                <x:String>Los Angeles</x:String>
                 <x:String>Chicago</x:String>
+                <x:String>Miami</x:String>
+                <x:String>Dallas</x:String>
             </Picker.Items>
         </Picker>
         <Button Text="Guardar" Command="{Binding GuardarCommand}" BackgroundColor="Aqua"/>

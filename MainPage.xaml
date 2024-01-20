@@ -35,6 +35,9 @@
                                 <Label Grid.Row="4" Grid.Column="0" Text="Fecha de Salida: " FontAttributes="Bold"/>
                                 <Label Grid.Row="4" Grid.Column="1" HorizontalOptions="End" Text="{Binding FechaSalida,StringFormat='{0:dd/MM/yyyy}'}"/>
 
+                                <Label Grid.Row="7" Grid.Column="0" Text="Sede escogida: " FontAttributes="Bold" />                                
+                                <Label Grid.Row="7" Grid.Column="1" HorizontalOptions="EndAndExpand" Text="{Binding Sede}" />
+
                                 <Label Grid.Row="6" Grid.Column="0" Padding="0,15,10,5" Text="Editar Reserva" TextColor="Black">
                                     <Label.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding BindingContext.EditarCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}" CommandParameter="{Binding}"/>
