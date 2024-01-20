@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto_P3.Views.Inicio"
+             Title="Inicio">
+
+    <Grid>
+        <Image
+    Aspect="AspectFill"
+    Opacity="0.3"
+    Source="hotel1.jpg" />
+        <StackLayout Padding="15">
+        </StackLayout>
+        <StackLayout Spacing="0">
+            <StackLayout Padding="15,7,15,15" VerticalOptions="StartAndExpand">
+                <StackLayout VerticalOptions="CenterAndExpand" >
+                    <Label
+                    FontSize="60"  FontFamily="Aclonica-Regular"
+                    Text="Bienvenido"
+                    TextColor="Black" HorizontalTextAlignment="Center" />
+                    <Label FontSize="60" Text="a Tuki Hotel" HorizontalOptions="Center"  FontFamily="Aclonica-Regular"/>
+                    <Label FontSize="60" Text="APP" HorizontalOptions="Center"  FontFamily="Aclonica-Regular"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

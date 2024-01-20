@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto_P3.Views.INFO"
+             Title="About us">
+
+    <Grid>
+        <Image
+Aspect="AspectFill"
+Opacity="0.3"
+Source="hotel1.jpg" />
+        <StackLayout Padding="15">
+        </StackLayout>
+        <StackLayout Spacing="0">
+            <StackLayout Padding="15,7,15,15" VerticalOptions="StartAndExpand">
+                <StackLayout VerticalOptions="CenterAndExpand" >
+                    <Label Text=" En Tuki Hotel, aspiramos a ser más que un simple lugar para alojarse; nos esforzamos por ser la experiencia definitiva que convierte cada estancia en un recuerdo inolvidable. Nuestra visión es crear un santuario de lujo y comodidad, donde la elegancia se encuentre con la hospitalidad de manera armoniosa. En Tuki Hotel, no solo proporcionamos habitaciones exquisitamente diseñadas, sino que ofrecemos un ambiente acogedor que refleja la riqueza cultural y la calidez de nuestra comunidad.
+Buscamos ser un refugio para viajeros exigentes, brindándoles una experiencia única que va más allá de las expectativas convencionales. 
+Nos esforzamos por deleitar a nuestros huéspedes con un servicio excepcional, atención personalizada y detalles cuidadosamente curados. 
+ En Tuki Hotel, cada rincón está impregnado de sofisticación y encanto, desde nuestras elegantes habitaciones hasta nuestros espacios públicos vibrantes.
+Nuestra visión es ser reconocidos no solo por la calidad de nuestras instalaciones y servicios, sino también por la conexión emocional que establecemos con nuestros huéspedes. 
+Queremos ser el destino preferido para aquellos que buscan una escapada lujosa y memorable, donde cada momento se vive con elegancia y estilo.
+ En Tuki Hotel, no solo ofrecemos un lugar para quedarse; ofrecemos una experiencia incomparable que perdura en la memoria de nuestros huéspedes mucho después de su partida." FontAttributes="Italic" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

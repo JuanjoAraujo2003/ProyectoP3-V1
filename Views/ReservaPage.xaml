@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto_P3.Views.ReservaPage"
+             Title="{Binding TituloPagina}">
+    <VerticalStackLayout Padding="15">
+        <ActivityIndicator IsVisible="{Binding LoadingEsVisible}"
+                           IsRunning="{Binding LoadingEsVisible}"
+                           Color="Blue"
+                           HeightRequest="30"
+                           />
+        <Label Text="Nombre y Apellido"/>
+        <Entry Text="{Binding ReservaDto.Nombre}" Margin="0,0,0,10"/>
+        <Label Text="Cedula"/>
+        <Entry Text="{Binding ReservaDto.Cedula}" Margin="0,0,0,10" Keyboard="Numeric"/>
+        <Label Text="Numero de huespedes"/>
+        <Entry Text="{Binding ReservaDto.NumeroHuespedes}" Margin="0,0,0,10" Keyboard="Numeric"/>
+        <Label Text="Fecha Entrada"/>
+        <DatePicker Date="{Binding ReservaDto.FechaEntrada}" Margin="0,0,0,10"/>
+        <Label Text="Fecha Salida"/>
+        <DatePicker Date="{Binding ReservaDto.FechaSalida}" Margin="0,0,0,10"/>
+        <Label Text="Seleccione una sede" />
+        <Picker x:Name="pkSede" Title="Seleccione uno" >
+            <Picker.Items>
+                <x:String>San Francisco</x:String>
+                <x:String>Chicago</x:String>
+            </Picker.Items>
+        </Picker>
+        <Button Text="Guardar" Command="{Binding GuardarCommand}" BackgroundColor="Aqua"/>
+
+    </VerticalStackLayout>
+</ContentPage>
