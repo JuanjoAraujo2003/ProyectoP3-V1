@@ -7,7 +7,7 @@
         <ActivityIndicator IsVisible="{Binding LoadingEsVisible}"
                            IsRunning="{Binding LoadingEsVisible}"
                            Color="Blue"
-                           HeightRequest="30"
+                           HeightRequest="40"
                            />
         <Label Text="Nombre y Apellido"/>
         <Entry Text="{Binding ReservaDto.Nombre}" Margin="0,0,0,10"/>

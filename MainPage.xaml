@@ -2,20 +2,21 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:Proyecto_P3.DTOs"
-             x:Class="Proyecto_P3.MainPage">
+             x:Class="Proyecto_P3.MainPage"
+             BackgroundColor="DarkGrey">
 
-    <Grid RowDefinitions="Auto, Auto, *" RowSpacing="15" Margin="15">
+    <Grid RowDefinitions="Auto, Auto, *" RowSpacing="20" Margin="20">
         <Button Grid.Row="0" Text="Nueva Reserva" Command="{Binding CrearCommand}"/>
         <Label Grid.Row="1" Text="Sus Reservas" FontSize="Subtitle"/>
         <ScrollView Grid.Row="2">
             <CollectionView ItemsSource="{Binding ListaReserva}">
                 <CollectionView.ItemsLayout>
-                    <LinearItemsLayout ItemSpacing="5" Orientation="Vertical"/>
+                    <LinearItemsLayout ItemSpacing="10" Orientation="Vertical"/>
                 </CollectionView.ItemsLayout>
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:ReservaDTO">
-                        <Border Padding="10,5" HorizontalOptions="FillAndExpand" >
+                        <Border Padding="10,10" HorizontalOptions="FillAndExpand" >
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="5"/>
                             </Border.StrokeShape>
@@ -35,17 +36,17 @@
                                 <Label Grid.Row="4" Grid.Column="0" Text="Fecha de Salida: " FontAttributes="Bold"/>
                                 <Label Grid.Row="4" Grid.Column="1" HorizontalOptions="End" Text="{Binding FechaSalida,StringFormat='{0:dd/MM/yyyy}'}"/>
 
-                                <Label Grid.Row="7" Grid.Column="0" Text="Sede escogida: " FontAttributes="Bold" />                                
-                                <Label Grid.Row="7" Grid.Column="1" HorizontalOptions="EndAndExpand" Text="{Binding Sede}" />
+                                <Label Grid.Row="5" Grid.Column="0" Text="Sede escogida: " FontAttributes="Bold" />                                
+                                <Label Grid.Row="5" Grid.Column="1" HorizontalOptions="End" Text="{Binding Sede}" />
 
-                                <Label Grid.Row="6" Grid.Column="0" Padding="0,15,10,5" Text="Editar Reserva" TextColor="Black">
+                                <Label Grid.Row="8" Grid.Column="0" Padding="0,15,10,5" Text="Editar Reserva" TextColor="BlueViolet">
                                     <Label.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding BindingContext.EditarCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}" CommandParameter="{Binding}"/>
                                     </Label.GestureRecognizers>
 
                                 </Label>
 
-                                <Label Grid.Row="6" Grid.Column="1" Padding="10,15,0,5" Text="Eliminar Reserva" TextColor="DarkRed">
+                                <Label Grid.Row="8" Grid.Column="1" Padding="10,15,0,5" Text="Eliminar Reserva" TextColor="DarkRed">
                                     <Label.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding BindingContext.EliminarCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}" CommandParameter="{Binding}"/>
                                     </Label.GestureRecognizers>
