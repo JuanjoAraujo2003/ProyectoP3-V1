@@ -17,7 +17,7 @@ public partial class ApiCiudades : ContentPage
 
             foreach (var city in cities)
             {
-                cityLabel.Text += $"Nombre de la ciudad: {city.name}\n";
+                cityLabel.Text += $"\n\nNombre de la ciudad: {city.name}\n";
 
             }
         }
@@ -53,5 +53,7 @@ public partial class ApiCiudades : ContentPage
                 }
             }
         }
+
+        btnCiudades.IsVisible = false;
     }
 }

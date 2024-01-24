@@ -20,7 +20,7 @@
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="5"/>
                             </Border.StrokeShape>
-                            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*">
+                            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*">
                                 <Label Grid.Row="0" Grid.Column="0" Text="Reserva a nombre de: " FontAttributes="Bold"/>
                                 <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Text="{Binding Nombre}"/>
 
@@ -36,9 +36,6 @@
                                 <Label Grid.Row="4" Grid.Column="0" Text="Fecha de Salida: " FontAttributes="Bold"/>
                                 <Label Grid.Row="4" Grid.Column="1" HorizontalOptions="End" Text="{Binding FechaSalida,StringFormat='{0:dd/MM/yyyy}'}"/>
 
-                                <Label Grid.Row="5" Grid.Column="0" Text="Sede escogida: " FontAttributes="Bold" />                                
-                                <Label Grid.Row="5" Grid.Column="1" HorizontalOptions="End" Text="{Binding Sede}" />
-
                                 <Label Grid.Row="8" Grid.Column="0" Padding="0,15,10,5" Text="Editar Reserva" TextColor="BlueViolet">
                                     <Label.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding BindingContext.EditarCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}" CommandParameter="{Binding}"/>
@@ -46,7 +43,7 @@
 
                                 </Label>
 
-                                <Label Grid.Row="8" Grid.Column="1" Padding="10,15,0,5" Text="Eliminar Reserva" TextColor="DarkRed">
+                                <Label Grid.Row="8" Grid.Column="1" Padding="10,15,0,5" Text="Eliminar Reserva" TextColor="Red">
                                     <Label.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding BindingContext.EliminarCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}" CommandParameter="{Binding}"/>
                                     </Label.GestureRecognizers>
