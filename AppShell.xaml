@@ -26,6 +26,10 @@
         Title="Ciudades de hoteles"
         ContentTemplate="{DataTemplate views:ApiCiudades}"
        />
+    <ShellContent
+        Title="Empleados del hotel"
+        ContentTemplate="{DataTemplate views:EmpleadosHotel}"
+       />
 
 
 </Shell>

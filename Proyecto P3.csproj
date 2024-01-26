@@ -68,6 +68,9 @@
 	  <MauiXaml Update="Views\Contacto.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\EmpleadosHotel.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\INFO.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
