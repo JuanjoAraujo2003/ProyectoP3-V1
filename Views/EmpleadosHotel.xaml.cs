@@ -39,6 +39,7 @@ public partial class EmpleadosHotel : ContentPage
                     var json = await response.Content.ReadAsStringAsync();
                     var empleados = JsonConvert.DeserializeObject<List<Empleado>>(json);
 
+
                     displayEmpleadosInformation(empleados);
                 }
             }
