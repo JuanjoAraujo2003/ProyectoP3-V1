@@ -17,7 +17,10 @@ public partial class EmpleadosHotel : ContentPage
         {
             foreach (var empleado in empleados)
             {
-                empleadosLabel.Text += $"\n\nNombre de los empleados: {empleado.nombreEmpleado}\n";
+                empleadosLabel.Text += $"\n\nNombre del empleado: {empleado.nombreEmpleado}\n";
+                empleadosLabel.Text += $"\n\nCargo: {empleado.cargoEmpleado}\n";
+                empleadosLabel.Text += $"\n\nSede: {empleado.sedeID}\n";
+
             }
         }
         else
