@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proyecto_P3.Views.EmpleadosHotel"
-             Title="EmpleadosHotel">
+             Title="Empleados del Hotel"
+             BackgroundColor="DarkGray">
 
     <Grid>
         <Label x:Name="empleadosLabel" Text="Empleados: " FontSize="17" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />

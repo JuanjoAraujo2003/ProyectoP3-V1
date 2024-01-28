@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using Proyecto_P3.Models;
+using System.Diagnostics;
 
 namespace Proyecto_P3.Views;
 
@@ -27,22 +28,35 @@ public partial class EmpleadosHotel : ContentPage
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
-        if (Connectivity.NetworkAccess == NetworkAccess.Internet)
+        try
         {
-            using (var client = new HttpClient())
+            var httpClient = new HttpClient();
+            httpClient.Timeout = TimeSpan.FromSeconds(30);
+
+            var response = await httpClient.GetAsync("https://localhost:7204/api/Empleados");
+
+            if (response.IsSuccessStatusCode)
             {
-                string url = $"http://localhost:7204/api/Empleados";
+                var data = await response.Content.ReadAsStringAsync();
+                var empleados = JsonConvert.DeserializeObject<List<Empleado>>(data);
 
-                var response = await client.GetAsync(url);
-                if (response.IsSuccessStatusCode)
-                {
-                    var json = await response.Content.ReadAsStringAsync();
-                    var empleados = JsonConvert.DeserializeObject<List<Empleado>>(json);
-
-
-                    displayEmpleadosInformation(empleados);
-                }
+                displayEmpleadosInformation(empleados);
+            }
+            else
+            {
+                Debug.WriteLine($"Error al obtener los datos: {response.StatusCode}");
             }
         }
+        catch (HttpRequestException ex)
+        {
+            Debug.WriteLine($"Error al obtener los datos: {ex.Message}");
+            if (ex.InnerException != null)
+            {
+                Debug.WriteLine($"Mensaje de la excepción interna: {ex.InnerException.Message}");
+            }
+            Debug.WriteLine($"StackTrace: {ex.StackTrace}");
+
+        }
+        btnEmpleados.IsVisible = false;
     }
 }
